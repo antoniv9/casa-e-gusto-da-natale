@@ -5,92 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Casa e Gusto da Natale</title>
   
-  <!-- Google Fonts (Roboto) -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts (Merriweather pour le texte et Pacifico pour le titre) -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Pacifico&display=swap" rel="stylesheet">
   
   <style>
-    /* Fond de page amélioré */
+    /* Fond de page général */
     body {
-        font-family: 'Roboto', sans-serif; /* Applique la police */
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4; /* Fond plus clair */
-        color: #333;
+      margin: 0;
+      padding: 0;
+      font-family: 'Merriweather', serif;
+      background-color: #f9f4e7;
+      color: #333;
+      line-height: 1.6;
     }
 
-    /* En-tête avec animation */
+    /* En-tête avec fond d'image */
     header {
-        background-color: #8c2f39;
-        color: white;
-        padding: 30px;
-        text-align: center;
-        font-size: 2rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+      background-image: url('https://via.placeholder.com/1920x600?text=Bienvenue+Chez+Nous');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
     }
 
-    /* Liens du menu avec hover effet */
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #8c2f39;
+      padding: 15px;
+    }
+
     nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 20px;
-        transition: background-color 0.3s ease; /* Animation au survol */
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 10px;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover {
-        background-color: #e0a96d;
-        border-radius: 5px;
+      background-color: #e0a96d;
+      border-radius: 5px;
     }
 
-    /* Galerie d'images avec bordure et ombre */
+    /* Sections principales */
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Galerie d'images */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
     .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
     }
 
     .gallery img:hover {
-        transform: scale(1.05); /* Effet zoom au survol */
+      transform: scale(1.05);
     }
 
-    /* Formulaire de réservation avec champs stylisés */
-    form input, form textarea {
-        width: 100%;
-        padding: 15px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        margin-bottom: 20px;
-        font-size: 1rem;
-        background-color: #f9f9f9;
-        transition: border 0.3s ease;
+    /* Formulaire de réservation */
+    .reservation-form input,
+    .reservation-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1.1rem;
+      background-color: #f9f9f9;
     }
 
-    form input:focus, form textarea:focus {
-        border: 2px solid #8c2f39;
-        background-color: #fff;
+    .reservation-form input[type="submit"] {
+      background-color: #8c2f39;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    form input[type="submit"] {
-        background-color: #8c2f39;
-        color: white;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+    .reservation-form input[type="submit"]:hover {
+      background-color: #e0a96d;
     }
 
-    form input[type="submit"]:hover {
-        background-color: #e0a96d;
+    /* Pied de page */
+    footer {
+      background-color: #8c2f39;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
+
+  <!-- En-tête -->
   <header>
     <h1>Casa e Gusto da Natale</h1>
     <p>Authentique cuisine italienne à Soumagne</p>
   </header>
+
+  <!-- Navigation -->
   <nav>
     <a href="#accueil">Accueil</a>
     <a href="#menu">Menu</a>
@@ -99,10 +159,14 @@
     <a href="#reservation">Réservation</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <!-- Section Accueil -->
   <section id="accueil">
-    <h2>Bienvenue chez nous</h2>
-    <p>Situé au cœur de Soumagne, Casa e Gusto da Natale vous invite à découvrir les saveurs de l’Italie dans une ambiance chaleureuse et conviviale. Pâtes fraîches faites maison, pain artisanal et plats savoureux vous attendent dans un cadre familial.</p>
+    <h2>Bienvenue dans notre restaurant</h2>
+    <p>Au cœur de Soumagne, Casa e Gusto da Natale vous propose une expérience culinaire italienne authentique. Savourez nos plats faits maison, dans une ambiance chaleureuse et conviviale.</p>
   </section>
+
+  <!-- Section Menu -->
   <section id="menu">
     <h2>Notre Menu</h2>
     <ul>
@@ -114,30 +178,22 @@
       <li>Pain maison</li>
     </ul>
   </section>
-  <section id="infos">
-    <h2>Informations pratiques</h2>
-    <p><strong>Adresse :</strong> Avenue de la Résistance 528, 4630 Soumagne, Belgique<br>
-    <strong>Téléphone :</strong> 04 377 38 11<br>
-    <strong>Capacité :</strong> 120 places en salle (70 au rez-de-chaussée, 50 à l'étage), 60 places en terrasse pendant l'été<br>
-    <strong>Horaires :</strong><br>
-    Mardi à dimanche : 12:00 - 14:00 / 18:00 - 22:00<br>
-    Fermé le lundi</p>
-    <h3>Nous trouver :</h3>
-    <iframe src="https://www.google.com/maps?q=Avenue+de+la+R%C3%A9sistance+528,+Soumagne,+Belgique&output=embed"></iframe>
-  </section>
+
+  <!-- Section Galerie -->
   <section id="galerie">
     <h2>Galerie</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/400x300?text=Int%C3%A9rieur+du+restaurant" alt="Intérieur du restaurant">
-      <img src="https://via.placeholder.com/400x300?text=Terrasse+d%27%C3%A9t%C3%A9" alt="Terrasse d'été">
-      <img src="https://via.placeholder.com/400x300?text=P%C3%A2tes+fra%C3%AEches" alt="Pâtes fraîches">
-      <img src="https://via.placeholder.com/400x300?text=Pizza+maison" alt="Pizza maison">
+      <img src="https://via.placeholder.com/600x400?text=Int%C3%A9rieur+du+restaurant" alt="Intérieur du restaurant">
+      <img src="https://via.placeholder.com/600x400?text=Terrasse+d%27%C3%A9t%C3%A9" alt="Terrasse d'été">
+      <img src="https://via.placeholder.com/600x400?text=Pizza+fra%C3%AEche" alt="Pizza fraîche">
+      <img src="https://via.placeholder.com/600x400?text=P%C3%A2tes+fra%C3%AEches" alt="Pâtes fraîches">
     </div>
   </section>
+
+  <!-- Section Réservation -->
   <section id="reservation">
     <h2>Réservez votre table</h2>
-    <p>Utilisez le formulaire ci-dessous pour réserver gratuitement votre table :</p>
-    <form action="https://formspree.io/f/moqgrzjo" method="POST">
+    <form action="https://formspree.io/f/moqgrzjo" method="POST" class="reservation-form">
       <label for="nom">Nom :</label>
       <input type="text" name="Nom" id="nom" required>
 
@@ -159,6 +215,8 @@
       <input type="submit" value="Envoyer la réservation">
     </form>
   </section>
+
+  <!-- Section Contact -->
   <section id="contact">
     <h2>Contactez-nous</h2>
     <form>
@@ -170,8 +228,11 @@
     </form>
     <p>Suivez-nous sur <a href="https://www.facebook.com/CasaGusto/" target="_blank">Facebook</a></p>
   </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Casa e Gusto da Natale - Tous droits réservés</p>
   </footer>
+
 </body>
 </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa e Gusto da Natale</title>
+  
+  <!-- Google Fonts (Merriweather pour le texte et Pacifico pour le titre) -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Pacifico&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Fond de page général */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Merriweather', serif;
+      background-color: #f9f4e7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* En-tête avec fond d'image */
+    header {
+      background-image: url('https://via.placeholder.com/1920x600?text=Bienvenue+Chez+Nous');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #8c2f39;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e0a96d;
+      border-radius: 5px;
+    }
+
+    /* Sections principales */
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Galerie d'images */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Formulaire de réservation */
+    .reservation-form input,
+    .reservation-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1.1rem;
+      background-color: #f9f9f9;
+    }
+
+    .reservation-form input[type="submit"] {
+      background-color: #8c2f39;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .reservation-form input[type="submit"]:hover {
+      background-color: #e0a96d;
+    }
+
+    /* Pied de page */
+    footer {
+      background-color: #8c2f39;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <h1>Casa e Gusto da Natale</h1>
+    <p>Authentique cuisine italienne à Soumagne</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#menu">Menu</a>
+    <a href="#infos">Infos pratiques</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#reservation">Réservation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Section Accueil -->
+  <section id="accueil">
+    <h2>Bienvenue dans notre restaurant</h2>
+    <p>Au cœur de Soumagne, Casa e Gusto da Natale vous propose une expérience culinaire italienne authentique. Savourez nos plats faits maison, dans une ambiance chaleureuse et conviviale.</p>
+  </section>
+
+  <!-- Section Menu -->
+  <section id="menu">
+    <h2>Notre Menu</h2>
+    <ul>
+      <li>Pizza Margherita</li>
+      <li>Pasta alla Carbonara</li>
+      <li>Lasagnes maison</li>
+      <li>Tiramisu traditionnel</li>
+      <li>Pâtes fraîches maison</li>
+      <li>Pain maison</li>
+    </ul>
+  </section>
+
+  <!-- Section Galerie -->
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/600x400?text=Int%C3%A9rieur+du+restaurant" alt="Intérieur du restaurant">
+      <img src="https://via.placeholder.com/600x400?text=Terrasse+d%27%C3%A9t%C3%A9" alt="Terrasse d'été">
+      <img src="https://via.placeholder.com/600x400?text=Pizza+fra%C3%AEche" alt="Pizza fraîche">
+      <img src="https://via.placeholder.com/600x400?text=P%C3%A2tes+fra%C3%AEches" alt="Pâtes fraîches">
+    </div>
+  </section>
+
+  <!-- Section Réservation -->
+  <section id="reservation">
+    <h2>Réservez votre table</h2>
+    <form action="https://formspree.io/f/moqgrzjo" method="POST" class="reservation-form">
+      <label for="nom">Nom :</label>
+      <input type="text" name="Nom" id="nom" required>
+
+      <label for="email">Email :</label>
+      <input type="email" name="Email" id="email" required>
+
+      <label for="date">Date :</label>
+      <input type="date" name="Date" id="date" required>
+
+      <label for="heure">Heure :</label>
+      <input type="time" name="Heure" id="heure" required>
+
+      <label for="personnes">Nombre de personnes :</label>
+      <input type="number" name="Personnes" id="personnes" min="1" max="20" required>
+
+      <label for="message">Message complémentaire :</label>
+      <textarea name="Message" id="message"></textarea>
+
+      <input type="submit" value="Envoyer la réservation">
+    </form>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form>
+      <label for="name">Nom :</label><br>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="message">Message :</label><br>
+      <textarea id="message" name="message"></textarea><br><br>
+      <input type="submit" value="Envoyer">
+    </form>
+    <p>Suivez-nous sur <a href="https://www.facebook.com/CasaGusto/" target="_blank">Facebook</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Casa e Gusto da Natale - Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
